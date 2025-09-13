@@ -1,5 +1,6 @@
 export function initEvents(bot) {
   bot.on('message', (msg) => {
+    bot.sendMessage(msg.chat.id, `Halooo`);
     console.log('Pesan masuk:', msg.text);
   });
 
