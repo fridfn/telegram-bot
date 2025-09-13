@@ -1,7 +1,7 @@
 // api/telegram.js
 import TelegramBot from "node-telegram-bot-api";
 
-const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: false });
+const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { webHook: false });
 
 // handler API Vercel
 export default async function handler(req, res) {
