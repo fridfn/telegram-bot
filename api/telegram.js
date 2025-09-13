@@ -17,7 +17,12 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     bot.processUpdate(req.body);
     res.status(200).send('BOT READY');
-  } else {
-    res.status(405).send('Method Not Allowed');
   }
+  
+  if (req.method === 'GET') {
+    await bot.setWebHook("https://telegram-bot-tau-ochre.vercel.app/api/telegram");
+    return res.status(200).send('Webhook set!');
+  }
+  
+  res.status(405).send('Method Not Allowed');
 }
