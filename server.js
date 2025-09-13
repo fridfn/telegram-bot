@@ -19,7 +19,7 @@ initEvents(bot);
 
 const PORT = 3003;
 
-app.post('/webhook', (req, res) => {
+app.post('https://telegram-bot-tau-ochre.vercel.app/api/telegram', (req, res) => {
   bot.processUpdate(req.body);
   res.send('BOT READY');
 });
