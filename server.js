@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 const bot = new TelegramBot(token, { webHook: false });
-await bot.setWebHook('https://telegram-bot-tau-ochre.vercel.app/api/telegram');
 
 initCommands(bot);
 initEvents(bot);
