@@ -5,9 +5,8 @@ import { initEvents } from '../bot/events.js';
 
 dotenv.config();
 
-const webHook = process.env.WEBHOOK_VALUE;
 const token = process.env.TELEGRAM_BOT_TOKEN;
-const bot = new TelegramBot(token, { webHook: webHook }); // serverless, kita handle request sendiri
+const bot = new TelegramBot(token, { webHook: false }); // serverless, kita handle request sendiri
 
 // Inisialisasi commands & events
 initCommands(bot);

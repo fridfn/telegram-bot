@@ -11,9 +11,8 @@ dotenv.config();
 const app = express();
 app.use(bodyParser.json());
 
-const webHook = process.env.WEBHOOK_VALUE;
 const token = process.env.TELEGRAM_BOT_TOKEN;
-const bot = new TelegramBot(token, { webHook: webHook });
+const bot = new TelegramBot(token, { webHook: false });
 
 initCommands(bot);
 initEvents(bot);
