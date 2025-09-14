@@ -5,10 +5,10 @@ const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { webHook: false });
 
 // handler API Vercel
 export default async function handler(req, res) {
- console.log("TOKEN TELEGRAM:", process.env.TELEGRAM_BOT_TOKEN ? "✅ ADA" : "❌ KOSONG");
-  if (req.method === "POST") {
+   if (req.method === "POST") {
    res.status(200).json({ ok: true });
-   
+   console.log(req.body)
+    
     try {
       bot.processUpdate(req.body);
     } catch (err) {
