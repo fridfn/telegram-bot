@@ -1,7 +1,7 @@
 {
   "functions": {
-    "api/**/*.js": {
-      "runtime": "vercel-bun@latest"
+    "api/**/*.ts": {
+      "runtime": "bun@latest"
     }
   }
 }
