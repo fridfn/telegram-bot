@@ -7,13 +7,15 @@ const bot = new TelegramBot(process.env.TELEGRAM_BOT_TOKEN, { webHook: false });
 export default async function handler(req, res) {
  console.log("TOKEN TELEGRAM:", process.env.TELEGRAM_BOT_TOKEN ? "✅ ADA" : "❌ KOSONG");
   if (req.method === "POST") {
+   res.status(200).json({ ok: true });
+   
     try {
-      await bot.processUpdate(req.body);
-      return res.status(200).json({ ok: true });
+      bot.processUpdate(req.body);
     } catch (err) {
       console.error("processUpdate error:", err);
       return res.status(500).json({ error: "failed" });
     }
+   return;
   }
   return res.status(200).send("Hello from bot endpoint");
 }
