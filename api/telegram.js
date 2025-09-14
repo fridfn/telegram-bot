@@ -22,7 +22,7 @@ export default async function handler(req, res) {
 
 // example listener
 bot.on("message", (msg) => {
-  bot.sendMessage(msg.chat.id, "Halo Farid 👋 aku hidup di Vercel nih!");
+  bot.sendMessage(msg.chat.id, `Halo ${msg.from.first_name} 👋 aku bot yang di buat oleh Farid dan berjalan di server Vercel nih!");
 });
 
 
