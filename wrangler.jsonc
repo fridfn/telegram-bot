@@ -1,5 +1,5 @@
 {
   "name": "telegram-bot-worker",
-  "main": "/api/telegram.js",
+  "main": "../api/telegram.js",
   "compatibility_date": "2025-09-15"
 }
