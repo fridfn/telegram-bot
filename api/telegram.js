@@ -1,7 +1,7 @@
 import { Redis } from "@upstash/redis";
 import TelegramBot from "node-telegram-bot-api";
-import { initCommands } from './bot/commands.js';
-import { initEvents } from './bot/events.js';
+import { initCommands } from '../bot/commands.js';
+import { initEvents } from '../bot/events.js';
 
 const redis = new Redis({
   url: process.env.UPSTASH_REDIS_REST_URL,
