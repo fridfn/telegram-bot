@@ -31,6 +31,6 @@ app.listen(PORT, async () => {
   const url = listener.url();
   console.log(`Ngrok tunnel established at: ${url}`);
 
-  await bot.setWebHook(`${url}/webhook`);
+  await bot.setWebHook(`${url}/api/telegram`);
   console.log('Webhook Telegram sudah diset!');
 });
